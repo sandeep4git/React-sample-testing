@@ -3,6 +3,14 @@ import './App.css';
 import Header from './component/header/header';
 import Headline from './component/headline/headline';
 
+const tempArr = [{
+  firstName: 'Joe',
+  lastName: 'Bloggs',
+  email: 'joebloggs@gmail.com',
+  age: 24,
+  onlineStatus: true
+}]
+
 class App extends Component {
   render() {
     return (
