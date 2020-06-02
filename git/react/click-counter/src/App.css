@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  text-align: left;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Open Sans' sans-serif;
 }
 
 .App-logo {
@@ -43,3 +44,9 @@
   margin:50px auto 80px;
   padding:0 10px
 }
+
+.ListItemComponent{
+  text-align:left;
+}
+
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
