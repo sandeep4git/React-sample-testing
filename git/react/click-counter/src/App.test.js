@@ -35,6 +35,17 @@ describe('App Component', () => {
         const component = findByTestAtrr(wrapper, 'component-app');
         expect(component.length).toBe(1);
     });
+    it('exampleMethod should update state as expected', () => {
+        const classInstance = wrapper.instance();
+        classInstance.exampleMethod_updatesState();
+        const newState = classInstance.state.hideBtn;
+        expect(newState).toBe(true);
+    })
+    it('exampleMethod_returnsValue method should return value as expected', () => {
+        const classInstance = wrapper.instance();
+        const newValue = classInstance.exampleMethod_returnsValue(6);
+        expect(newValue).toBe(7);
+    })
 })
 // it('renders learn react link', () => {
 //     const wrapper = shallow(<App />)

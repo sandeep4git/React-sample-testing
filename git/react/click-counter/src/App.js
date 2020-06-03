@@ -15,18 +15,33 @@ const tempArr = [{
   onlineStatus: true
 }]
 
+const initialState = {
+  hideBtn: false
+}
+
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {
+      ...initialState
+    }
     this.fetch = this.fetch.bind(this);
   }
+  exampleMethod_updatesState() {
+    const { hideBtn } = this.state;
+    this.setState({
+      hideBtn: !hideBtn
+    })
+  }
+  exampleMethod_returnsValue(number) {
+    return number + 1;
+  }
   fetch() {
-    console.log('fetch function');
     this.props.fetchPosts();
+    this.exampleMethod_updatesState();
   }
   render() {
     const { posts } = this.props;
-    console.log(posts);
     const configButton = {
       buttonText: 'Get Posts',
       emitEvent: this.fetch
