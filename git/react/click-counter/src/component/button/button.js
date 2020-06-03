@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import 'bootstrap/dist/css/bootstrap.css';
 
 class SharedButton extends Component {
 
@@ -13,7 +13,7 @@ class SharedButton extends Component {
         const { buttonText } = this.props;
 
         return (
-            <button onClick={() => this.submitEvent()} data-test="buttonComponent">
+            <button className='btn btn-primary' onClick={() => this.submitEvent()} data-test="buttonComponent">
                 {buttonText}
             </button>
         );

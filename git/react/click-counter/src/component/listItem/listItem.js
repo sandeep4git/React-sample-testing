@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import './listItem.css'
 class ListItem extends Component {
     render() {
         const { title, desc } = this.props;
@@ -8,9 +8,9 @@ class ListItem extends Component {
             return null;
         }
         return (
-            <div data-test='ListItemComponent'>
-                <h1 data-test='componentTitle'>{title}</h1>
-                <p data-test='componentDescription'>{desc}</p>
+            <div data-test='ListItemComponent' className='card'>
+                <h4 data-test='componentTitle' className="card-title card-item">{title}</h4>
+                <p data-test='componentDescription' className="card-text card-item">{desc}</p>
             </div>
         );
     }

@@ -6,6 +6,7 @@ import SharedButton from './component/button/button';
 import ListItem from './component/listItem/listItem';
 import { connect } from 'react-redux';
 import { fetchPosts } from './actions';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const tempArr = [{
   firstName: 'Joe',
